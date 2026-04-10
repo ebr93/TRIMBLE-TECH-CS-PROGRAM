@@ -4,13 +4,85 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Student Showcase | Trimble Tech Computer Science Program</title>
-  <meta name="description" content="Explore the kinds of projects students can build in the Trimble Tech Computer Science Program." />
+  <meta name="description" content="Explore student websites and projects from the Trimble Tech Computer Science Program." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
+
+  <style>
+    .showcase-toggle-btn {
+      margin-top: 1rem;
+      width: 100%;
+    }
+
+    .project-list-wrap {
+      margin-top: 1.25rem;
+      padding: 1.25rem;
+      border-radius: 1.25rem;
+      background: #f7faf9;
+      border: 1px solid rgba(19, 19, 19, 0.08);
+    }
+
+    .student-link-card {
+      background: #ffffff;
+      border: 1px solid rgba(19, 19, 19, 0.08);
+      border-radius: 1rem;
+      padding: 1.1rem;
+      height: 100%;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+      transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+    }
+
+    .student-link-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+      border-color: rgba(0, 135, 82, 0.18);
+    }
+
+    .student-link-card h4 {
+      font-size: 1.05rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .student-link-card p {
+      color: #6a737b;
+      margin-bottom: 0.9rem;
+      font-size: 0.95rem;
+    }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-meta span {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(0, 135, 82, 0.08);
+      color: #008752;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .project-group-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .section-note {
+      color: #6a737b;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+  </style>
 </head>
 <body data-page="showcase">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -35,10 +107,6 @@
           <li class="nav-item"><a class="nav-link" href="pathway.html">Pathway</a></li>
           <li class="nav-item"><a class="nav-link" href="credentials.html">Credentials</a></li>
           <li class="nav-item"><a class="nav-link" href="student-showcase.html">Student Showcase</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <li class="nav-item ms-lg-2">
-            <a class="btn btn-brand btn-sm" href="contact.html">Explore the Program</a>
-          </li>
         </ul>
       </div>
     </div>
@@ -50,7 +118,7 @@
         <span class="eyebrow">Student Showcase</span>
         <h1>Work that reflects creativity, growth, and technical skill</h1>
         <p class="section-subtitle mx-auto">
-          This page is designed to support future screenshots, project thumbnails, student spotlights, and portfolio examples from across the Computer Science pathway.
+          Browse student website examples by theme. Click a category to open the projects available in that section.
         </p>
       </div>
     </section>
@@ -58,91 +126,315 @@
     <section class="section-padding bg-white">
       <div class="container">
         <div class="section-header text-center mb-5">
-          <span class="eyebrow">Showcase Categories</span>
-          <h2>Types of student work featured in the program</h2>
+          <span class="eyebrow">Website Showcase Categories</span>
+          <h2>Student website examples</h2>
           <p class="section-subtitle mx-auto">
-            Each category demonstrates both technical development and the ability to apply learning in meaningful ways.
+            Each section expands to reveal available student websites. Projects open in a new tab for the best viewing experience.
           </p>
         </div>
 
         <div class="row g-4">
+
+          <!-- Musician -->
           <div class="col-md-6 col-xl-4">
             <article class="project-card reveal h-100">
-              <div class="project-thumb">Student Website Preview</div>
+              <div class="project-thumb">Musician Website Preview</div>
               <div class="project-body">
-                <h3>Student Websites</h3>
-                <p>Students design multi-page websites that combine layout, styling, accessibility, and visual communication.</p>
+                <h3>Musician Websites</h3>
+                <p>Student-built sites focused on artists, bands, music pages, visual structure, and themed content design.</p>
                 <div class="skill-tags">
-                  <span>HTML</span><span>CSS</span><span>Responsive Design</span><span>UI Structure</span>
+                  <span>HTML</span><span>CSS</span><span>Multi-Page Layout</span><span>Visual Design</span>
+                </div>
+
+                <button class="btn btn-brand showcase-toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#musicianProjects" aria-expanded="false" aria-controls="musicianProjects">
+                  View Musician Projects
+                </button>
+
+                <div class="collapse" id="musicianProjects">
+                  <div class="project-list-wrap">
+                    <div class="project-group-title">Musician Website Projects</div>
+                    <p class="section-note">Open each student website in a new tab.</p>
+
+                    <div class="row g-3">
+                      <div class="col-12">
+                        <div class="student-link-card">
+                          <h4>Musician Project 1</h4>
+                          <p>Music-themed student website with artist-focused structure and navigation.</p>
+                          <div class="project-meta">
+                            <span>Student Website</span>
+                            <span>codehs.me</span>
+                          </div>
+                          <a class="btn btn-outline-brand" href="https://ecbbfezaqz-3515275743-a.codehs.me/index.html" target="_blank" rel="noopener noreferrer">Open Project</a>
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <div class="student-link-card">
+                          <h4>Musician Project 2</h4>
+                          <p>Student-built musician page with multiple sections and themed visual presentation.</p>
+                          <div class="project-meta">
+                            <span>Student Website</span>
+                            <span>codehs.me</span>
+                          </div>
+                          <a class="btn btn-outline-brand" href="https://artistmusician-page-htmlcss-18997090.codehs.me/index.html" target="_blank" rel="noopener noreferrer">Open Project</a>
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <div class="student-link-card">
+                          <h4>Musician Project 3</h4>
+                          <p>Artist website example showing layout organization and content styling.</p>
+                          <div class="project-meta">
+                            <span>Student Website</span>
+                            <span>codehs.me</span>
+                          </div>
+                          <a class="btn btn-outline-brand" href="https://artistmusician-page-htmlcss-18996956.codehs.me/index.html" target="_blank" rel="noopener noreferrer">Open Project</a>
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <div class="student-link-card">
+                          <h4>Musician Project 4</h4>
+                          <p>Music website sample highlighting visual communication and page structure.</p>
+                          <div class="project-meta">
+                            <span>Student Website</span>
+                            <span>codehs.me</span>
+                          </div>
+                          <a class="btn btn-outline-brand" href="https://artistmusician-page-htmlcss-18998190.codehs.me/index.html" target="_blank" rel="noopener noreferrer">Open Project</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </article>
           </div>
 
+          <!-- Clothing -->
           <div class="col-md-6 col-xl-4">
             <article class="project-card reveal h-100">
-              <div class="project-thumb">Java App Preview</div>
+              <div class="project-thumb">Clothing Website Preview</div>
               <div class="project-body">
-                <h3>Java Projects</h3>
-                <p>Students build Java applications that practice logic, classes, methods, arrays, and object-oriented programming.</p>
+                <h3>Clothing Websites</h3>
+                <p>Student fashion and clothing brand website examples focused on layout, product presentation, and visual appeal.</p>
                 <div class="skill-tags">
-                  <span>Java</span><span>OOP</span><span>Algorithms</span><span>Debugging</span>
+                  <span>HTML</span><span>CSS</span><span>Branding</span><span>Page Design</span>
+                </div>
+
+                <button class="btn btn-brand showcase-toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#clothingProjects" aria-expanded="false" aria-controls="clothingProjects">
+                  View Clothing Projects
+                </button>
+
+                <div class="collapse" id="clothingProjects">
+                  <div class="project-list-wrap">
+                    <div class="project-group-title">Clothing Website Projects</div>
+                    <p class="section-note">You may want to remove duplicates later if you only want unique examples shown.</p>
+
+                    <div class="row g-3">
+                      <div class="col-12">
+                        <div class="student-link-card">
+                          <h4>Clothing Project 1</h4>
+                          <p>Student clothing website example with visual branding and product-style layout.</p>
+                          <div class="project-meta">
+                            <span>Student Website</span>
+                            <span>codehs.me</span>
+                          </div>
+                          <a class="btn btn-outline-brand" href="https://ecbbfezaqz-3338386069-a.codehs.me/index.html" target="_blank" rel="noopener noreferrer">Open Project</a>
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <div class="student-link-card">
+                          <h4>Clothing Project 2</h4>
+                          <p>Duplicate link currently provided in the clothing category.</p>
+                          <div class="project-meta">
+                            <span>Duplicate Link</span>
+                            <span>codehs.me</span>
+                          </div>
+                          <a class="btn btn-outline-brand" href="https://clothing-website-final-exam-18996503.codehs.me/index.html" target="_blank" rel="noopener noreferrer">Open Project</a>
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <div class="student-link-card">
+                          <h4>Clothing Project 3</h4>
+                          <p>Fashion website example with product-focused layout and styled page sections.</p>
+                          <div class="project-meta">
+                            <span>Student Website</span>
+                            <span>codehs.me</span>
+                          </div>
+                          <a class="btn btn-outline-brand" href="https://clothing-website-final-exam-18996141.codehs.me/index.html" target="_blank" rel="noopener noreferrer">Open Project</a>
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <div class="student-link-card">
+                          <h4>Clothing Project 4</h4>
+                          <p>Clothing website sample featuring final project styling and web layout structure.</p>
+                          <div class="project-meta">
+                            <span>Student Website</span>
+                            <span>codehs.me</span>
+                          </div>
+                          <a class="btn btn-outline-brand" href="https://clothing-website-final-exam-18998075.codehs.me/index.html" target="_blank" rel="noopener noreferrer">Open Project</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </article>
           </div>
 
+          <!-- Car -->
           <div class="col-md-6 col-xl-4">
             <article class="project-card reveal h-100">
-              <div class="project-thumb">Python Build Preview</div>
+              <div class="project-thumb">Car Website Preview</div>
               <div class="project-body">
-                <h3>Python Projects</h3>
-                <p>Students solve programming challenges, automate tasks, and create beginner-friendly applications through structured coding practice.</p>
+                <h3>Car Websites</h3>
+                <p>Student automotive websites showing structured content, themed design, and project presentation skills.</p>
                 <div class="skill-tags">
-                  <span>Python</span><span>Problem-Solving</span><span>Functions</span><span>Logic</span>
+                  <span>HTML</span><span>CSS</span><span>Content Layout</span><span>Theme Design</span>
+                </div>
+
+                <button class="btn btn-brand showcase-toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#carProjects" aria-expanded="false" aria-controls="carProjects">
+                  View Car Projects
+                </button>
+
+                <div class="collapse" id="carProjects">
+                  <div class="project-list-wrap">
+                    <div class="project-group-title">Car Website Projects</div>
+                    <p class="section-note">Includes direct hosted pages and one CodeHS share link.</p>
+
+                    <div class="row g-3">
+                      <div class="col-12">
+                        <div class="student-link-card">
+                          <h4>Car Project 1</h4>
+                          <p>Automotive website example with themed content and structured navigation.</p>
+                          <div class="project-meta">
+                            <span>Student Website</span>
+                            <span>codehs.me</span>
+                          </div>
+                          <a class="btn btn-outline-brand" href="https://ecbbfezaqz-3310852248-a.codehs.me/index.html" target="_blank" rel="noopener noreferrer">Open Project</a>
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <div class="student-link-card">
+                          <h4>Car Project 2</h4>
+                          <p>CodeHS share link version of a car website project.</p>
+                          <div class="project-meta">
+                            <span>CodeHS Share</span>
+                            <span>External Runner</span>
+                          </div>
+                          <a class="btn btn-outline-brand" href="https://codehs.com/share/id/car-website-project-AHa6YP/run" target="_blank" rel="noopener noreferrer">Open Project</a>
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <div class="student-link-card">
+                          <h4>Car Project 3</h4>
+                          <p>Student car website example hosted directly for cleaner viewing.</p>
+                          <div class="project-meta">
+                            <span>Student Website</span>
+                            <span>codehs.me</span>
+                          </div>
+                          <a class="btn btn-outline-brand" href="https://car-website-project-18996643.codehs.me/index.html" target="_blank" rel="noopener noreferrer">Open Project</a>
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <div class="student-link-card">
+                          <h4>Car Project 4</h4>
+                          <p>Automotive-themed student build showing organization and visual content structure.</p>
+                          <div class="project-meta">
+                            <span>Student Website</span>
+                            <span>codehs.me</span>
+                          </div>
+                          <a class="btn btn-outline-brand" href="https://car-website-project-18998047.codehs.me/index.html" target="_blank" rel="noopener noreferrer">Open Project</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </article>
           </div>
 
+          <!-- Sports -->
           <div class="col-md-6 col-xl-4">
             <article class="project-card reveal h-100">
-              <div class="project-thumb">Front-End Build Preview</div>
+              <div class="project-thumb">Sports Website Preview</div>
               <div class="project-body">
-                <h3>UI/UX and Front-End Builds</h3>
-                <p>Students create polished interfaces that show attention to hierarchy, clarity, usability, and visual design.</p>
+                <h3>Sports Websites</h3>
+                <p>Student sports team websites featuring themed content, team information, layout structure, and fan-focused presentation.</p>
                 <div class="skill-tags">
-                  <span>Bootstrap</span><span>UX Thinking</span><span>Layouts</span><span>Interaction</span>
+                  <span>HTML</span><span>CSS</span><span>Content Sections</span><span>Visual Theme</span>
+                </div>
+
+                <button class="btn btn-brand showcase-toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#sportsProjects" aria-expanded="false" aria-controls="sportsProjects">
+                  View Sports Projects
+                </button>
+
+                <div class="collapse" id="sportsProjects">
+                  <div class="project-list-wrap">
+                    <div class="project-group-title">Sports Website Projects</div>
+                    <p class="section-note">Includes hosted projects and CodeHS share links.</p>
+
+                    <div class="row g-3">
+                      <div class="col-12">
+                        <div class="student-link-card">
+                          <h4>Sports Project 1</h4>
+                          <p>Student sports website with team information and themed page design.</p>
+                          <div class="project-meta">
+                            <span>Student Website</span>
+                            <span>codehs.me</span>
+                          </div>
+                          <a class="btn btn-outline-brand" href="https://ecbbfezaqz-3234361071-a.codehs.me/index.html" target="_blank" rel="noopener noreferrer">Open Project</a>
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <div class="student-link-card">
+                          <h4>Sports Project 2</h4>
+                          <p>CodeHS share version of an improved sports team website project.</p>
+                          <div class="project-meta">
+                            <span>CodeHS Share</span>
+                            <span>External Runner</span>
+                          </div>
+                          <a class="btn btn-outline-brand" href="https://codehs.com/share/id/improve-your-sports-team-website-HIu4tx/run" target="_blank" rel="noopener noreferrer">Open Project</a>
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <div class="student-link-card">
+                          <h4>Sports Project 3</h4>
+                          <p>Additional sports team website example shared through CodeHS.</p>
+                          <div class="project-meta">
+                            <span>CodeHS Share</span>
+                            <span>External Runner</span>
+                          </div>
+                          <a class="btn btn-outline-brand" href="https://codehs.com/share/id/improve-your-sports-team-website-wtbOi3/run" target="_blank" rel="noopener noreferrer">Open Project</a>
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <div class="student-link-card">
+                          <h4>Sports Project 4</h4>
+                          <p>Hosted student sports website with team content and structured sections.</p>
+                          <div class="project-meta">
+                            <span>Student Website</span>
+                            <span>codehs.me</span>
+                          </div>
+                          <a class="btn btn-outline-brand" href="https://improve-your-sports-team-website-18996939.codehs.me/index.html" target="_blank" rel="noopener noreferrer">Open Project</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </article>
           </div>
 
-          <div class="col-md-6 col-xl-4">
-            <article class="project-card reveal h-100">
-              <div class="project-thumb">Capstone Preview</div>
-              <div class="project-body">
-                <h3>Capstone and Independent Study</h3>
-                <p>Advanced students build longer-term work that reflects initiative, technical depth, and real ownership of the creative process.</p>
-                <div class="skill-tags">
-                  <span>Research</span><span>Iteration</span><span>Presentation</span><span>Portfolio</span>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-md-6 col-xl-4">
-            <article class="project-card reveal h-100">
-              <div class="project-thumb">Spotlight Preview</div>
-              <div class="project-body">
-                <h3>Student Success Spotlights</h3>
-                <p>This space can feature student reflections, project highlights, competition work, or achievement-based program stories.</p>
-                <div class="skill-tags">
-                  <span>Growth</span><span>Leadership</span><span>Communication</span><span>Achievement</span>
-                </div>
-              </div>
-            </article>
-          </div>
         </div>
       </div>
     </section>
@@ -191,18 +483,14 @@
             <div class="feature-card reveal">
               <h3>Suggested future additions</h3>
               <ul class="mb-0">
-                <li>Screenshot galleries from student sites and applications</li>
-                <li>Embedded project clips or demo videos</li>
-                <li>Senior capstone highlights</li>
-                <li>Competition, certification, or AP success spotlights</li>
-                <li>Quotes from students about what they learned</li>
+                <li>Add screenshots for each featured student project</li>
+                <li>Add student first names or class period labels if appropriate</li>
+                <li>Highlight standout projects or exemplary design choices</li>
+                <li>Add short teacher-selected descriptions for featured work</li>
+                <li>Remove duplicate links and keep only strongest examples</li>
               </ul>
             </div>
           </div>
-        </div>
-
-        <div class="text-center mt-5">
-          <a href="contact.html" class="btn btn-brand">Ask About Student Opportunities</a>
         </div>
       </div>
     </section>
@@ -227,7 +515,6 @@
           <h4>Explore</h4>
           <ul class="footer-links">
             <li><a href="student-showcase.html">Student Showcase</a></li>
-            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="col-lg-3">
